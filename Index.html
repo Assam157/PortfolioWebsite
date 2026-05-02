@@ -1,220 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My Cv</title>
-    <link rel="shortcut icon" href="favicon.png">
-    <link rel="stylesheet" href="Starter.css">
-    <link rel="stylesheet" href="bootstrap.css">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/unicons.css">
-    <script src="https://kit.fontawesome.com/1ef1808268.js" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maitreya Gupta | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth;}
+body{background:#0f172a;color:white;}
+
+/* NAV */
+nav{
+position:fixed;top:0;width:100%;
+display:flex;justify-content:space-between;
+padding:20px 60px;background:rgba(0,0,0,0.4);
+backdrop-filter:blur(10px);z-index:1000;
+}
+nav h2{color:#38bdf8;}
+nav a{color:white;margin-left:20px;text-decoration:none;transition:.3s;}
+nav a:hover{color:#38bdf8;}
+
+/* HERO */
+.hero{
+height:100vh;display:flex;flex-direction:column;
+justify-content:center;align-items:center;text-align:center;
+}
+.profile-pic{
+width:140px;height:140px;border-radius:50%;
+object-fit:cover;margin-bottom:20px;
+border:3px solid #38bdf8;
+box-shadow:0 0 25px rgba(56,189,248,0.5);
+transition:.3s;
+}
+.profile-pic:hover{transform:scale(1.05);}
+
+.hero h1{font-size:3rem;}
+.hero span{color:#38bdf8;}
+.hero p{margin:20px 0;opacity:.7;}
+
+/* SOCIALS */
+.socials{margin-top:20px;font-size:1.6rem;}
+.socials a{color:white;margin:0 12px;transition:.3s;}
+.socials a:hover{color:#38bdf8;transform:scale(1.2);}
+
+/* BUTTON */
+.btn{
+padding:10px 25px;border:none;
+background:#38bdf8;color:black;
+cursor:pointer;border-radius:5px;
+transition:.3s;
+}
+.btn:hover{transform:scale(1.05);}
+
+/* SECTION */
+section{padding:80px 10%;}
+.title{font-size:2rem;margin-bottom:30px;color:#38bdf8;}
+
+/* CARDS */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+.card{
+background:#1e293b;padding:20px;
+border-radius:10px;transition:.3s;
+}
+.card:hover{transform:translateY(-5px);}
+
+/* SKILLS */
+.skill{margin-bottom:15px;}
+.bar{
+height:6px;background:#334155;
+border-radius:5px;overflow:hidden;
+}
+.bar span{display:block;height:100%;background:#38bdf8;}
+
+/* CONTACT */
+.contact-form{
+display:flex;flex-direction:column;
+gap:15px;max-width:500px;
+}
+.contact-form input,
+.contact-form textarea{
+padding:12px;border:none;border-radius:5px;
+background:#1e293b;color:white;outline:none;
+}
+.contact-form textarea{min-height:120px;}
+.contact-form input:focus,
+.contact-form textarea:focus{
+border:1px solid #38bdf8;
+}
+
+/* LOADING */
+.loader{
+display:none;
+border:4px solid #1e293b;
+border-top:4px solid #38bdf8;
+border-radius:50%;
+width:30px;height:30px;
+animation:spin 1s linear infinite;
+margin:auto;
+}
+@keyframes spin{
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
+}
+
+/* POPUP */
+.popup{
+position:fixed;
+top:50%;left:50%;
+transform:translate(-50%,-50%);
+background:#1e293b;
+padding:20px 30px;
+border-radius:10px;
+display:none;
+text-align:center;
+box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+.popup.show{display:block;}
+
+/* FADE */
+.fade{opacity:0;transform:translateY(20px);transition:1s;}
+.fade.show{opacity:1;transform:translateY(0);}
+
+footer{text-align:center;padding:20px;opacity:.6;}
+
+</style>
 </head>
 
 <body>
 
-<header>
-<div class="user">
-<img src="Image.png">
-<h3 class="name">Maitreya Gupta</h3>
-<p class="post">Front End Developer | Robotics Enthusiast</p>
+<nav>
+<h2>Maitreya</h2>
+<div>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
 </div>
-
-<nav class="navbar">
-<ul>
-<li><a href="#Home">Home</a></li>
-<li><a href="#Contact-me">Contact Me</a></li>
-<li><a href="#Projects">Projects</a></li>
-<li><a href="#About Me">About Me</a></li>
-<li><a href="#Certificates">Certificates</a></li>
-<li><a href="#CGPAs">CGPAs</a></li>
-<li><a href="#Section">Areas Of Interest</a></li>
-</ul>
 </nav>
-</header>
 
-<div class="container">
+<!-- HERO -->
+<section class="hero">
+<img src="Image.png" class="profile-pic">
 
-<!-- HOME -->
-<section class="home" id="Home">
-<h3>Hi There</h3>
-<h3 class="name">my name is <span>Maitreya Gupta</span></h3>
-<h3 class="post">I am <span class="typing-text"></span></h3>
+<h1>Hello, I'm <span>Maitreya Gupta</span></h1>
+<p>ECE Student | Robotics Enthusiast | Embedded Systems Learner</p>
 
-<a href="#Contact-me"><button class="btn">hire me</button></a>
-
-<div class="share">
-<a href="https://www.facebook.com/profile.php?id=100026405508189" class="fab fa-facebook-f"></a>
-<a href="https://twitter.com/Maitrey90747842" class="fab fa-twitter"></a>
-<a href="https://www.instagram.com/maitreyasshadow/" class="fab fa-instagram"></a>
-<a href="https://github.com/MaitreyaGupta" class="fab fa-github"></a>
-<a href="https://www.linkedin.com/feed/?trk=onboarding-landing" class="fab fa-linkedin"></a>
+<div class="socials">
+<a href="https://www.instagram.com/mgshadow12/" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://github.com/Assam157" target="_blank"><i class="fab fa-github"></i></a>
+<a href="https://www.linkedin.com/feed/?trk=onboarding-landing" target="_blank"><i class="fab fa-linkedin"></i></a>
 </div>
+
+<a href="#projects"><button class="btn">View Projects</button></a>
 </section>
 
 <!-- ABOUT -->
-<section class="about" id="About Me">
-<div class="content">
-<h3 class="name">My Name Is Maitreya Gupta</h3>
-
+<section id="about" class="fade">
+<h2 class="title">About Me</h2>
 <p>
-I am a 3rd year ECE Student with strong interest in robotics, embedded systems, and intelligent automation. 
-I enjoy working with Python and C++ and building real-world systems that combine hardware and software.
+I am a 3rd year ECE student focused on robotics, embedded systems, and intelligent automation.
+I enjoy building real-world systems that integrate hardware and software.
 </p>
-
-<p>
-I am currently working on an active robotics project involving a robotic car with sensor integration and real-time data processing. 
-<a href="https://drive.google.com/drive/folders/1TwgydTlWyWTpwRDfg_91cCaJNY19jnHr" target="_blank">
-View Robotic Car Project
-</a>
-</p>
-
-<p>
-I have a background in Karate and Kickboxing, where I achieved a bronze medal at state level. 
-I enjoy learning new technologies and continuously improving my technical and problem-solving skills.
-</p>
-
-</div>
-
-<div class="skills">
-
-<div class="progress">
-<h3>HTML <span>75%</span></h3>
-<div class="bar"><span></span></div>
-</div>
-
-<div class="progress">
-<h3>CSS <span>60%</span></h3>
-<div class="bar"><span></span></div>
-</div>
-
-<div class="progress">
-<h3>JavaScript <span>50%</span></h3>
-<div class="bar"><span></span></div>
-</div>
-
-<div class="progress">
-<h3>Python <span>50%</span></h3>
-<div class="bar"><span></span></div>
-</div>
-
-<div class="progress">
-<h3>C++ <span>60%</span></h3>
-<div class="bar"><span></span></div>
-</div>
-
-<div class="progress">
-<h3>React <span>65%</span></h3>
-<div class="bar"><span></span></div>
-</div>
-
-<div class="progress">
-<h3>NodeJS <span>70%</span></h3>
-<div class="bar"><span></span></div>
-</div>
-
-</div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact" id="Contact-me">
-<div class="row">
-
-<form action="mailto:maitreyaguptaa@gmail.com">
-<input type="text" class="box" placeholder="first name">
-<input type="text" class="box" placeholder="last name">
-<input type="email" class="box" placeholder="your email">
-<input type="text" class="box" placeholder="your project">
-<textarea cols="30" rows="10" class="box message" placeholder="message"></textarea>
-<input type="submit" value="message" class="btn">
-</form>
-
-<div class="content">
-<div class="icons">
-<h3><i class="fas fa-map-marker-alt"></i> address</h3>
-<p>Kolkata, India 700032</p>
-</div>
-
-<div class="icons">
-<h3><i class="fas fa-envelope"></i> email</h3>
-<p>maitreyaguptaa@gmail.com</p>
-</div>
-
-<div class="icons">
-<h3><i class="fas fa-phone"></i> phone</h3>
-<p>8697539102</p>
-</div>
-</div>
-
-</div>
 </section>
 
 <!-- PROJECTS -->
-<section class="projects" id="Projects">
-<div class="box-container">
+<section id="projects" class="fade">
+<h2 class="title">Projects</h2>
+<div class="grid">
 
-<div class="box">
-<div class="year">2024 - Present</div>
+<div class="card">
 <h3>Robotic Car System</h3>
-<p>Active robotics project involving obstacle detection using sensors and real-time data processing.</p>
+<p>Sensor-based obstacle detection with real-time processing.</p>
 <a href="https://drive.google.com/drive/folders/1TwgydTlWyWTpwRDfg_91cCaJNY19jnHr">View Project</a>
 </div>
 
-<div class="box">
-<div class="year">2023</div>
-<h3>Full Stack E-Commerce System</h3>
-<p>Complete shopping platform with admin control and inventory management.</p>
-<a href="https://cartpage-q5pz.onrender.com">View Project</a>
+<div class="card">
+<h3>E-Commerce System</h3>
+<p>Full-stack shopping platform with admin panel.</p>
+<a href="https://cartpage-q5pz.onrender.com">Live Demo</a>
 </div>
 
-<div class="box">
-<div class="year">2023</div>
-<h3>Android Job Portal App</h3>
-<p>Application for job and internship listings with recruiter interaction.</p>
+<div class="card">
+<h3>Android Job Portal</h3>
+<p>App for job listings and recruiter interaction.</p>
 <a href="https://drive.google.com/drive/folders/1xxmCKIUAnzWDO4cv9X6Mpf0noyVl2Vn9">View Demo</a>
 </div>
 
-<div class="box">
-<div class="year">2022</div>
-<h3>Virtual Lab (React)</h3>
-<p>Interactive simulation platform for experiments with hardware compatibility.</p>
-<a href="https://dextergalleryside.onrender.com">View Project</a>
-</div>
-
 </div>
 </section>
 
-<!-- AREAS OF INTEREST -->
-<section id="Section" class="Section">
-<div class="box-container">
+<!-- SKILLS -->
+<section id="skills" class="fade">
+<h2 class="title">Skills</h2>
 
-<div class="box">
-<h1>Areas Of Interest</h1>
-<ul>
-<li>Robotics and Intelligent Automation</li>
-<li>Embedded Systems and IoT</li>
-<li>Artificial Intelligence and Machine Learning</li>
-<li>Computer Vision and Real-Time Systems</li>
-<li>Signal Processing and Communication Systems</li>
-</ul>
-</div>
+<div class="skill"><p>HTML</p><div class="bar"><span style="width:75%"></span></div></div>
+<div class="skill"><p>CSS</p><div class="bar"><span style="width:60%"></span></div></div>
+<div class="skill"><p>JavaScript</p><div class="bar"><span style="width:50%"></span></div></div>
+<div class="skill"><p>Python</p><div class="bar"><span style="width:50%"></span></div></div>
+<div class="skill"><p>C++</p><div class="bar"><span style="width:60%"></span></div></div>
 
-</div>
 </section>
 
+<!-- CONTACT -->
+<section id="contact" class="fade">
+<h2 class="title">Contact Me</h2>
+
+<form class="contact-form" id="contactForm">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<textarea name="message" placeholder="Your Message" required></textarea>
+
+<button type="submit" class="btn">Send Message</button>
+<div class="loader" id="loader"></div>
+</form>
+
+</section>
+
+<!-- POPUP -->
+<div class="popup" id="popup">
+<h3>Message Sent ✅</h3>
+<p>Thank you! I'll get back to you soon.</p>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+<footer>
+<p>© 2026 Maitreya Gupta</p>
+</footer>
 
 <script>
-var type = new Typed('.typing-text',{
-strings : [
-'Robotics Enthusiast',
-'Embedded Systems Learner',
-'ECE Student',
-],
-typeSpeed:120,
-loop:true
+
+/* FADE */
+const faders=document.querySelectorAll('.fade');
+window.addEventListener('scroll',()=>{
+faders.forEach(el=>{
+if(el.getBoundingClientRect().top<window.innerHeight-100){
+el.classList.add('show');
+}
 });
+});
+
+/* FORM LOGIC */
+const form=document.getElementById("contactForm");
+const loader=document.getElementById("loader");
+const popup=document.getElementById("popup");
+
+form.addEventListener("submit",function(e){
+e.preventDefault();
+
+const email=form.email.value;
+const emailPattern=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+if(!emailPattern.test(email)){
+alert("Please enter a valid email");
+return;
+}
+
+loader.style.display="block";
+
+fetch("https://formsubmit.co/ajax/maitreyaguptaa@gmail.com",{
+method:"POST",
+headers:{
+'Content-Type':'application/json'
+},
+body:JSON.stringify({
+name:form.name.value,
+email:form.email.value,
+message:form.message.value
+})
+})
+.then(response=>response.json())
+.then(data=>{
+loader.style.display="none";
+popup.classList.add("show");
+form.reset();
+
+setTimeout(()=>popup.classList.remove("show"),3000);
+})
+.catch(()=>{
+loader.style.display="none";
+alert("Something went wrong.");
+});
+});
+
 </script>
 
 </body>
