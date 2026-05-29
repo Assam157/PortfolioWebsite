@@ -27,6 +27,49 @@ section{padding:80px 10%}
 .skill{text-align:center}
 .contact a{color:#38bdf8}
 footer{text-align:center;padding:30px;opacity:.7}
+  .contact-container{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+margin-top:30px;
+}
+
+.contact-info,
+.contact-form-box{
+background:#1e293b;
+padding:30px;
+border-radius:15px;
+}
+
+.contact-item{
+display:flex;
+align-items:center;
+margin-bottom:20px;
+font-size:1rem;
+}
+
+.contact-item i{
+color:#38bdf8;
+font-size:1.3rem;
+width:40px;
+}
+
+.contact-item a{
+color:white;
+text-decoration:none;
+}
+
+.contact-item a:hover{
+color:#38bdf8;
+}
+
+@media(max-width:768px){
+
+.contact-container{
+grid-template-columns:1fr;
+}
+
+}
 </style>
 </head>
 <body>
@@ -157,6 +200,65 @@ e.preventDefault();
 document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
 });
 });
+</script>
+  <script>
+
+const form=document.getElementById("contactForm");
+const loader=document.getElementById("loader");
+const popup=document.getElementById("popup");
+
+form.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+loader.style.display="block";
+
+fetch("https://formsubmit.co/ajax/maitreyaguptaa@gmail.com",{
+
+method:"POST",
+
+headers:{
+'Content-Type':'application/json'
+},
+
+body:JSON.stringify({
+
+name:form.name.value,
+
+email:form.email.value,
+
+message:form.message.value
+
+})
+
+})
+
+.then(response=>response.json())
+
+.then(data=>{
+
+loader.style.display="none";
+
+popup.classList.add("show");
+
+form.reset();
+
+setTimeout(()=>{
+popup.classList.remove("show");
+},3000);
+
+})
+
+.catch(()=>{
+
+loader.style.display="none";
+
+alert("Something went wrong.");
+
+});
+
+});
+
 </script>
 </body>
 </html>
