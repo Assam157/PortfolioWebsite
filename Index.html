@@ -8,25 +8,30 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth}
-body{background:#0f172a;color:#fff}
-nav{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;padding:20px 8%;background:rgba(15,23,42,.9);backdrop-filter:blur(10px);z-index:1000}
-nav a{color:#fff;text-decoration:none;margin-left:20px}
+body{background:#0f172a;color:white}
+nav{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;padding:20px 8%;background:rgba(0,0,0,.5);backdrop-filter:blur(10px);z-index:1000}
+nav a{color:white;text-decoration:none;margin-left:20px}
 nav a:hover,.accent{color:#38bdf8}
 .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:120px 20px}
 .profile{width:180px;height:180px;border-radius:50%;border:4px solid #38bdf8;object-fit:cover}
 .hero h1{font-size:3rem;margin:20px 0}
-.hero p{max-width:800px;opacity:.9}
-.btn{display:inline-block;background:#38bdf8;color:#000;padding:12px 24px;border-radius:8px;text-decoration:none;margin:10px;font-weight:600}
+.btn{display:inline-block;background:#38bdf8;color:black;padding:12px 24px;border-radius:8px;text-decoration:none;margin:10px;font-weight:600}
 section{padding:80px 10%}
 .title{color:#38bdf8;margin-bottom:25px}
-.stats,.skills,.grid{display:grid;gap:20px}
+.stats,.grid,.skills{display:grid;gap:20px}
 .stats{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
-.stat,.card,.skill{background:#1e293b;padding:20px;border-radius:12px}
 .grid{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.stat,.card,.skill{background:#1e293b;padding:20px;border-radius:12px}
 .card img{width:100%;height:180px;object-fit:cover;border-radius:8px;margin-bottom:10px}
+.skills{grid-template-columns:repeat(auto-fit,minmax(120px,1fr))}
 .skill{text-align:center}
-.contact a{color:#38bdf8}
-footer{text-align:center;padding:30px;opacity:.7}
+.contact-form{display:flex;flex-direction:column;gap:15px;max-width:500px}
+.contact-form input,.contact-form textarea{padding:12px;border:none;border-radius:5px;background:#1e293b;color:white}
+.loader{display:none;border:4px solid #1e293b;border-top:4px solid #38bdf8;border-radius:50%;width:30px;height:30px;animation:spin 1s linear infinite}
+.popup{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:#1e293b;padding:20px 30px;border-radius:10px;display:none;z-index:9999}
+.popup.show{display:block}
+@keyframes spin{100%{transform:rotate(360deg)}}
+footer{text-align:center;padding:30px}
 </style>
 </head>
 <body>
@@ -45,19 +50,13 @@ footer{text-align:center;padding:30px;opacity:.7}
 <section class="hero">
 <img src="assets/profile.jpg" class="profile">
 <h1>Hello, I'm <span class="accent">Maitreya Gupta</span></h1>
-<p>M.Tech Student (Intelligent Automation & Robotics) at Jadavpur University | Full Stack Developer | Robotics Engineer | Roblox Game Developer</p>
-<div>
+<p>M.Tech Intelligent Automation & Robotics | Full Stack Developer | Robotics Engineer | Roblox Game Developer</p>
 <a class="btn" href="assets/resume.pdf">Download Resume</a>
-<a class="btn" href="#projects">View Projects</a>
-</div>
 </section>
 
 <section id="about">
 <h2 class="title">About Me</h2>
-<p>
-I am pursuing M.Tech in Intelligent Automation and Robotics at Jadavpur University after completing my B.Tech in Electronics and Communication Engineering.
-My interests span Robotics, IoT, Full Stack Development, Research, Android Applications and Game Development. I enjoy building complete systems ranging from web platforms and mobile apps to robotics solutions and multiplayer gaming experiences.
-</p>
+<p>I am pursuing M.Tech in Intelligent Automation and Robotics at Jadavpur University. My interests span Robotics, IoT, Full Stack Development, Android Applications, Research and Game Development.</p>
 </section>
 
 <section>
@@ -71,53 +70,22 @@ My interests span Robotics, IoT, Full Stack Development, Research, Android Appli
 </section>
 
 <section id="projects">
-<h2 class="title">Featured Projects</h2>
+<h2 class="title">Projects</h2>
 <div class="grid">
-
-<div class="card">
-<img src="assets/projects/galaxy.png">
-<h3>Galaxy Discoveree</h3>
-<p>Interactive astronomy exploration platform featuring galaxies and space content.</p>
-<a class="btn" href="https://galaxydiscoveree.netlify.app/">Live Demo</a>
-</div>
-
-<div class="card">
-<img src="assets/projects/mimo.png">
-<h3>MIMO Antenna Research</h3>
-<p>Compact Wideband MIMO Antenna for 5G and IoT Applications.</p>
-<a class="btn" href="assets/research/mimo_project.pdf">Research PDF</a>
-</div>
-
-<div class="card">
-<img src="assets/projects/jobportal.png">
-<h3>Android Job Portal</h3>
-<p>Android platform for jobs, internships and recruiter interaction.</p>
-<a class="btn" href="#">Add Drive Demo Link</a>
-</div>
-
-<div class="card">
-<img src="assets/projects/robotics.png">
-<h3>Robotics Car</h3>
-<p>Obstacle detection using IR sensors with backend streaming and image processing.</p>
-</div>
-
-<div class="card">
-<img src="assets/projects/roblox.png">
-<h3>Inception Battlegrounds</h3>
-<p>Professional Roblox multiplayer combat game built using Roblox Studio and Lua.</p>
-<a class="btn" href="https://www.roblox.com/games/14190314476/Inception-Battlegrounds">Play Game</a>
-</div>
-
+<div class="card"><img src="assets/projects/galaxy.png"><h3>Galaxy Discoveree</h3><a class="btn" href="https://galaxydiscoveree.netlify.app/">Live Demo</a></div>
+<div class="card"><img src="assets/projects/mimo.png"><h3>MIMO Antenna Research</h3><a class="btn" href="assets/research/mimo_project.pdf">Research PDF</a></div>
+<div class="card"><img src="assets/projects/jobportal.png"><h3>Android Job Portal</h3><a class="btn" href="#">Add Drive Demo Link</a></div>
+<div class="card"><img src="assets/projects/robotics.png"><h3>Robotics Car</h3></div>
+<div class="card"><img src="assets/projects/roblox.png"><h3>Inception Battlegrounds</h3><a class="btn" href="https://www.roblox.com/games/14190314476/Inception-Battlegrounds">Play Game</a></div>
 </div>
 </section>
 
 <section id="skills">
 <h2 class="title">Skills</h2>
-<div class="skills" style="grid-template-columns:repeat(auto-fit,minmax(120px,1fr))">
-<div class="skill">Java</div><div class="skill">Python</div><div class="skill">C</div><div class="skill">C++</div>
-<div class="skill">HTML</div><div class="skill">CSS</div><div class="skill">JavaScript</div><div class="skill">React</div>
-<div class="skill">Django</div><div class="skill">SQL</div><div class="skill">Lua</div><div class="skill">Roblox Studio</div>
-<div class="skill">IoT</div><div class="skill">Robotics</div><div class="skill">Git</div>
+<div class="skills">
+<div class="skill">Java</div><div class="skill">Python</div><div class="skill">C++</div><div class="skill">Django</div>
+<div class="skill">React</div><div class="skill">SQL</div><div class="skill">Lua</div><div class="skill">Roblox Studio</div>
+<div class="skill">IoT</div><div class="skill">Robotics</div>
 </div>
 </section>
 
@@ -128,35 +96,61 @@ My interests span Robotics, IoT, Full Stack Development, Research, Android Appli
 <div class="card"><a href="assets/certificates/hackerrank-python.pdf">HackerRank Python</a></div>
 <div class="card"><a href="assets/certificates/hackerrank-sql.pdf">HackerRank SQL</a></div>
 <div class="card"><a href="assets/certificates/bsnl.pdf">BSNL Training</a></div>
-<div class="card"><a href="assets/certificates/ncet.pdf">NCET Certification</a></div>
+<div class="card"><a href="assets/certificates/ncet.pdf">NCET</a></div>
 </div>
 </section>
 
-<section>
-<h2 class="title">Achievements</h2>
-<ul>
-<li>Gold Winner - Ju Srijan, Jadavpur University</li>
-<li>State Level Bronze Medalist - Kickboxing</li>
-<li>Active Member - IOTA Club</li>
-</ul>
+<section id="contact">
+<h2 class="title">Contact Me</h2>
+<form class="contact-form" id="contactForm">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<textarea name="message" placeholder="Your Message" required></textarea>
+<button type="submit" class="btn">Send Message</button>
+<div class="loader" id="loader"></div>
+</form>
 </section>
 
-<section id="contact" class="contact">
-<h2 class="title">Contact</h2>
-<p>Email: <a href="mailto:maitreyaguptaa@gmail.com">maitreyaguptaa@gmail.com</a></p>
-<p><a href="https://github.com/Assam157">GitHub</a></p>
-<p><a href="https://www.linkedin.com/in/maitreya-gupta-0754b0359/">LinkedIn</a></p>
-</section>
+<div class="popup" id="popup">
+<h3>Message Sent ✅</h3>
+<p>Thank you! I'll get back to you soon.</p>
+</div>
 
-<footer>© 2026 Maitreya Gupta</footer>
+<footer>
+<p>GitHub: github.com/Assam157 | LinkedIn: linkedin.com/in/maitreya-gupta-0754b0359</p>
+</footer>
 
 <script>
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-a.addEventListener('click',e=>{
+const form=document.getElementById("contactForm");
+const loader=document.getElementById("loader");
+const popup=document.getElementById("popup");
+
+form.addEventListener("submit",function(e){
 e.preventDefault();
-document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+loader.style.display="block";
+
+fetch("https://formsubmit.co/ajax/maitreyaguptaa@gmail.com",{
+method:"POST",
+headers:{'Content-Type':'application/json'},
+body:JSON.stringify({
+name:form.name.value,
+email:form.email.value,
+message:form.message.value
+})
+})
+.then(r=>r.json())
+.then(()=>{
+loader.style.display="none";
+popup.classList.add("show");
+form.reset();
+setTimeout(()=>popup.classList.remove("show"),3000);
+})
+.catch(()=>{
+loader.style.display="none";
+alert("Something went wrong.");
 });
 });
 </script>
+
 </body>
 </html>
