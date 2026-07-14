@@ -1,423 +1,504 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maitreya Gupta | Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth}
-body{background:#0f172a;color:#fff}
-nav{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;padding:20px 8%;background:rgba(15,23,42,.9);backdrop-filter:blur(10px);z-index:1000}
-nav a{color:#fff;text-decoration:none;margin-left:20px}
-nav a:hover,.accent{color:#38bdf8}
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:120px 20px}
-.profile{width:180px;height:180px;border-radius:50%;border:4px solid #38bdf8;object-fit:cover}
-.hero h1{font-size:3rem;margin:20px 0}
-.hero p{max-width:800px;opacity:.9}
-.btn{display:inline-block;background:#38bdf8;color:#000;padding:12px 24px;border-radius:8px;text-decoration:none;margin:10px;font-weight:600}
-section{padding:80px 10%}
-.title{color:#38bdf8;margin-bottom:25px}
-.stats,.skills,.grid{display:grid;gap:20px}
-.stats{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
-.stat,.card,.skill{background:#1e293b;padding:20px;border-radius:12px}
-.grid{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
-.card img{width:100%;height:180px;object-fit:cover;border-radius:8px;margin-bottom:10px}
-.skill{text-align:center}
-.contact a{color:#38bdf8}
-footer{text-align:center;padding:30px;opacity:.7}
-  .contact-container{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:30px;
-margin-top:30px;
-}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maitreya Gupta | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth
+        }
 
-.contact-info,
-.contact-form-box{
-background:rgba(30,41,59,0.9);
-padding:30px;
-border-radius:15px;
-border:1px solid rgba(56,189,248,0.2);
-box-shadow:0 8px 25px rgba(0,0,0,0.25);
-backdrop-filter:blur(10px);
-}
-.contact-item{
-display:flex;
-align-items:center;
-margin-bottom:20px;
-font-size:1rem;
-}
+        body {
+            background: #0f172a;
+            color: #fff
+        }
 
-.contact-item i{
-color:#38bdf8;
-font-size:1.3rem;
-width:40px;
-}
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 8%;
+            background: rgba(15, 23, 42, .9);
+            backdrop-filter: blur(10px);
+            z-index: 1000
+        }
 
-.contact-item a{
-color:white;
-text-decoration:none;
-}
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px
+        }
 
-.contact-item a:hover{
-color:#38bdf8;
-}
+        nav a:hover,
+        .accent {
+            color: #38bdf8
+        }
 
-@media(max-width:768px){
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 120px 20px
+        }
 
-.contact-container{
-grid-template-columns:1fr;
-}
+        .profile {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid #38bdf8;
+            object-fit: cover
+        }
 
-}
-  .contact-form{
-display:flex;
-flex-direction:column;
-gap:15px;
-}
+        .hero h1 {
+            font-size: 3rem;
+            margin: 20px 0
+        }
 
-.contact-form input,
-.contact-form textarea{
-padding:12px;
-border:none;
-border-radius:8px;
-background:#0f172a;
-color:white;
-outline:none;
-font-size:1rem;
-}
+        .hero p {
+            max-width: 800px;
+            opacity: .9
+        }
 
-.contact-form input:focus,
-.contact-form textarea:focus{
-border:1px solid #38bdf8;
-}
+        .btn {
+            display: inline-block;
+            background: #38bdf8;
+            color: #000;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin: 10px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+        }
 
-.contact-form textarea{
-min-height:120px;
-resize:none;
-}
+        section {
+            padding: 80px 10%
+        }
 
-.loader{
-display:none;
-border:4px solid #1e293b;
-border-top:4px solid #38bdf8;
-border-radius:50%;
-width:30px;
-height:30px;
-animation:spin 1s linear infinite;
-margin:auto;
-}
+        .title {
+            color: #38bdf8;
+            margin-bottom: 25px
+        }
 
-.popup{
-position:fixed;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-background:#1e293b;
-padding:20px 30px;
-border-radius:10px;
-display:none;
-text-align:center;
-box-shadow:0 0 20px rgba(0,0,0,0.5);
-z-index:9999;
-}
+        .stats,
+        .skills,
+        .grid {
+            display: grid;
+            gap: 20px
+        }
 
-.popup.show{
-display:block;
-}
+        .stats {
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr))
+        }
 
-@keyframes spin{
-0%{
-transform:rotate(0deg);
-}
-100%{
-transform:rotate(360deg);
-}
-}
-</style>
+        .stat,
+        .card,
+        .skill {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 12px
+        }
+
+        .grid {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px
+        }
+
+        .card .btn {
+            margin: 10px 0 0 0;
+            font-size: 0.85rem;
+            padding: 8px 18px;
+        }
+
+        .skill {
+            text-align: center
+        }
+
+        .contact a {
+            color: #38bdf8
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            opacity: .7
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .contact-info,
+        .contact-form-box {
+            background: rgba(30, 41, 59, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .contact-item i {
+            color: #38bdf8;
+            font-size: 1.3rem;
+            width: 40px;
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: #38bdf8;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: #0f172a;
+            color: white;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border: 1px solid #38bdf8;
+        }
+
+        .contact-form textarea {
+            min-height: 120px;
+            resize: none;
+        }
+
+        .loader {
+            display: none;
+            border: 4px solid #1e293b;
+            border-top: 4px solid #38bdf8;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: auto;
+        }
+
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #1e293b;
+            padding: 20px 30px;
+            border-radius: 10px;
+            display: none;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+        }
+
+        .popup.show {
+            display: block;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @media(max-width:768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+            nav div a {
+                margin: 0 10px;
+                font-size: 0.85rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<nav>
-<h2 class="accent">Maitreya Gupta</h2>
-<div>
-<a href="#about">About</a>
-<a href="#projects">Projects</a>
-<a href="#skills">Skills</a>
-<a href="#certificates">Certificates</a>
-<a href="#contact">Contact</a>
-</div>
-</nav>
-
-<section class="hero">
-<img src="assets/profile.jpg" class="profile">
-<h1>Hello, I'm <span class="accent">Maitreya Gupta</span></h1>
-<p>M.Tech Student (Intelligent Automation & Robotics) at Jadavpur University | Full Stack Developer | Robotics Engineer | Roblox Game Developer</p>
-<div>
-<a class="btn" href="assets/resume.pdf">Download Resume</a>
-<a class="btn" href="#projects">View Projects</a>
-</div>
-</section>
-
-<section id="about">
-<h2 class="title">About Me</h2>
-<p>
-I am pursuing M.Tech in Intelligent Automation and Robotics at Jadavpur University after completing my B.Tech in Electronics and Communication Engineering.
-My interests span Robotics, IoT, Full Stack Development, Research, Android Applications and Game Development. I enjoy building complete systems ranging from web platforms and mobile apps to robotics solutions and multiplayer gaming experiences.
-</p>
-</section>
-
-<section>
-<h2 class="title">Highlights</h2>
-<div class="stats">
-<div class="stat"><h3>8.47</h3><p>Current CGPA</p></div>
-<div class="stat"><h3>6+</h3><p>Major Projects</p></div>
-<div class="stat"><h3>M.Tech</h3><p>Jadavpur University</p></div>
-<div class="stat"><h3>Roblox</h3><p>Published Game</p></div>
-</div>
-</section>
-
-<section id="projects">
-<h2 class="title">Featured Projects</h2>
-<div class="grid">
-
- 
-
-<div class="card">
-<img src="assets/projects/mimo.png">
-<h3>MIMO Antenna Research</h3>
-<p>Compact Wideband MIMO Antenna for 5G and IoT Applications.</p>
-<a class="btn" href="assets/research/mimo_project.pdf">Research PDF</a>
-</div>
-
-<div class="card">
-<img src="assets/projects/jobportal.png">
-<h3>Android Job Portal</h3>
-<p>Android platform for jobs, internships and recruiter interaction.</p>
-<a class="btn" href="#">Add Drive Demo Link</a>
-</div>
-    <div class="card">
- <img src="assets/Modeling.png">
-    <p>
-        Lightweight 3D Medical Image Segmentation architecture based on a MobileNet-inspired encoder and UNet3D decoder. Designed for efficient volumetric segmentation on resource-constrained hardware while maintaining high accuracy.</p>
-       
-        <a class="btn" href="https://drive.google.com/file/d/1WUjI7OsDQBmiD3bHw9A6kvwdkadnOpoX/view?usp=sharing" target="_blank">
-            📄 Read Paper
-        </a>
-  
-</div>
- 
-
-<div class="card">
-<img src="assets/projects/robotics.png">
-<h3>Robotics Car</h3>
-<p>Obstacle detection using IR sensors with backend streaming and image processing.</p>
-</div>
-  
-
-<div class="card">
-<img src="assets/projects/roblox.png">
-<h3>Inception Battlegrounds</h3>
-<p>Professional Roblox multiplayer combat game built using Roblox Studio and Lua.</p>
-<a class="btn" href="https://www.roblox.com/games/14190314476/Inception-Battlegrounds">Play Game</a>
-</div>
-
-</div>
-</section>
-
-<section id="skills">
-<h2 class="title">Skills</h2>
-<div class="skills" style="grid-template-columns:repeat(auto-fit,minmax(120px,1fr))">
-<div class="skill">Java</div><div class="skill">Python</div><div class="skill">C</div><div class="skill">C++</div>
-<div class="skill">HTML</div><div class="skill">CSS</div><div class="skill">JavaScript</div><div class="skill">React</div>
-<div class="skill">Django</div><div class="skill">SQL</div><div class="skill">Lua</div><div class="skill">Roblox Studio</div>
-<div class="skill">IoT</div><div class="skill">Robotics</div><div class="skill">Git</div>
-</div>
-</section>
-
-<section id="certificates">
-<h2 class="title">Certificates</h2>
-<div class="grid">
-<div class="card"><a href="assets/certificates/coding-ninjas-fullstack.pdf">Coding Ninjas Full Stack</a></div>
-<div class="card"><a href="assets/certificates/hackerrank-python.pdf">HackerRank Python</a></div>
-<div class="card"><a href="assets/certificates/hackerrank-sql.pdf">HackerRank SQL</a></div>
-<div class="card"><a href="assets/certificates/bsnl.pdf">BSNL Training</a></div>
-<div class="card"><a href="assets/certificates/ncet.pdf">NCET Certification</a></div>
-</div>
-</section>
-
-<section>
-<h2 class="title">Achievements</h2>
-<ul>
-<li>Gold Winner - Ju Srijan, Jadavpur University</li>
-<li>State Level Bronze Medalist - Kickboxing</li>
-<li>Active Member - IOTA Club</li>
-</ul>
-</section>
-
-
-<h2 class="title">Contact Me</h2>
-
-<div class="contact-container">
-
-    <!-- LEFT SIDE -->
-    <div class="contact-info">
-
-        <h3 style="color:#38bdf8;margin-bottom:20px;">
-            Let's Connect
-        </h3>
-
-        <div class="contact-item">
-            <i class="fas fa-envelope"></i>
-            <a href="mailto:maitreyaguptaa@gmail.com">
-                maitreyaguptaa@gmail.com
-            </a>
+    <nav>
+        <h2 class="accent">Maitreya Gupta</h2>
+        <div>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#certificates">Certificates</a>
+            <a href="#contact">Contact</a>
         </div>
+    </nav>
 
-        <div class="contact-item">
-            <i class="fas fa-phone"></i>
-            <a href="tel:+918697539102">
-                +91 8697539102
-            </a>
+    <!-- HERO -->
+    <section class="hero">
+        <img src="assets/profile.jpg" class="profile" alt="Maitreya Gupta" />
+        <h1>Hello, I'm <span class="accent">Maitreya Gupta</span></h1>
+        <p>M.Tech Student (Intelligent Automation & Robotics) at Jadavpur University | Full Stack Developer | Robotics Engineer | Roblox Game Developer</p>
+        <div>
+            <a class="btn" href="assets/resume.pdf">Download Resume</a>
+            <a class="btn" href="#projects">View Projects</a>
         </div>
+    </section>
 
-        <div class="contact-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <span>Kolkata, India</span>
+    <!-- ABOUT -->
+    <section id="about">
+        <h2 class="title">About Me</h2>
+        <p>
+            I am pursuing M.Tech in Intelligent Automation and Robotics at Jadavpur University after completing my B.Tech in Electronics and Communication Engineering.
+            My interests span Robotics, IoT, Full Stack Development, Research, Android Applications and Game Development. I enjoy building complete systems ranging from web platforms and mobile apps to robotics solutions and multiplayer gaming experiences.
+        </p>
+    </section>
+
+    <!-- HIGHLIGHTS -->
+    <section>
+        <h2 class="title">Highlights</h2>
+        <div class="stats">
+            <div class="stat"><h3>8.47</h3><p>Current CGPA</p></div>
+            <div class="stat"><h3>6+</h3><p>Major Projects</p></div>
+            <div class="stat"><h3>M.Tech</h3><p>Jadavpur University</p></div>
+            <div class="stat"><h3>Roblox</h3><p>Published Game</p></div>
         </div>
+    </section>
 
-        <div class="contact-item">
-            <i class="fab fa-github"></i>
-            <a href="https://github.com/Assam157" target="_blank">
-                GitHub
-            </a>
+    <!-- PROJECTS -->
+    <section id="projects">
+        <h2 class="title">Featured Projects</h2>
+        <div class="grid">
+
+            <!-- MIMO Antenna -->
+            <div class="card">
+                <img src="assets/projects/mimo.png" alt="MIMO Antenna" />
+                <h3>MIMO Antenna Research</h3>
+                <p>Compact Wideband MIMO Antenna for 5G and IoT Applications.</p>
+                <a class="btn" href="assets/research/mimo_project.pdf">Research PDF</a>
+            </div>
+
+            <!-- Android Job Portal -->
+            <div class="card">
+                <img src="assets/projects/jobportal.png" alt="Job Portal" />
+                <h3>Android Job Portal</h3>
+                <p>Android platform for jobs, internships and recruiter interaction.</p>
+                <a class="btn" href="#">Add Drive Demo Link</a>
+            </div>
+
+            <!-- 3D Medical Segmentation -->
+            <div class="card">
+                <img src="assets/Modeling.png" alt="3D Medical Segmentation" />
+                <p>Lightweight 3D Medical Image Segmentation architecture based on a MobileNet-inspired encoder and UNet3D decoder. Designed for efficient volumetric segmentation on resource-constrained hardware while maintaining high accuracy.</p>
+                <a class="btn" href="https://drive.google.com/file/d/1WUjI7OsDQBmiD3bHw9A6kvwdkadnOpoX/view?usp=sharing" target="_blank">
+                    📄 Read Paper
+                </a>
+            </div>
+
+            <!-- Robotics Car -->
+            <div class="card">
+                <img src="assets/projects/robotics.png" alt="Robotics Car" />
+                <h3>Robotics Car</h3>
+                <p>Obstacle detection using IR sensors with backend streaming and image processing.</p>
+            </div>
+
+            <!-- Roblox Game -->
+            <div class="card">
+                <img src="assets/projects/roblox.png" alt="Inception Battlegrounds" />
+                <h3>Inception Battlegrounds</h3>
+                <p>Professional Roblox multiplayer combat game built using Roblox Studio and Lua.</p>
+                <a class="btn" href="https://www.roblox.com/games/14190314476/Inception-Battlegrounds">Play Game</a>
+            </div>
+
+            <!-- 🆕 DEXTER'S LAB -->
+            <div class="card">
+                <img src="assets/projects/dexter.png" alt="Dexter's Lab" onerror="this.src='https://via.placeholder.com/400x180/1e293b/38bdf8?text=Dexter%27s+Lab'" />
+                <h3>Dexter's Lab</h3>
+                <p>Interactive gallery &amp; lab showcase web app built with Flask and deployed on Render. Features a dynamic side-gallery with real-time updates.</p>
+                <a class="btn" href="https://dextergalleryside.onrender.com" target="_blank">🚀 Live Demo</a>
+            </div>
+
         </div>
+    </section>
 
-        <div class="contact-item">
-            <i class="fab fa-linkedin"></i>
-            <a href="https://www.linkedin.com/in/maitreya-gupta-0754b0359/" target="_blank">
-                LinkedIn
-            </a>
+    <!-- SKILLS -->
+    <section id="skills">
+        <h2 class="title">Skills</h2>
+        <div class="skills" style="grid-template-columns:repeat(auto-fit,minmax(120px,1fr))">
+            <div class="skill">Java</div><div class="skill">Python</div><div class="skill">C</div><div class="skill">C++</div>
+            <div class="skill">HTML</div><div class="skill">CSS</div><div class="skill">JavaScript</div><div class="skill">React</div>
+            <div class="skill">Django</div><div class="skill">SQL</div><div class="skill">Lua</div><div class="skill">Roblox Studio</div>
+            <div class="skill">IoT</div><div class="skill">Robotics</div><div class="skill">Git</div>
         </div>
+    </section>
 
-        <div class="contact-item">
-            <i class="fas fa-gamepad"></i>
-            <a href="https://www.roblox.com/games/14190314476/Inception-Battlegrounds" target="_blank">
-                Inception Battlegrounds
-            </a>
+    <!-- CERTIFICATES -->
+    <section id="certificates">
+        <h2 class="title">Certificates</h2>
+        <div class="grid">
+            <div class="card"><a href="assets/certificates/coding-ninjas-fullstack.pdf">Coding Ninjas Full Stack</a></div>
+            <div class="card"><a href="assets/certificates/hackerrank-python.pdf">HackerRank Python</a></div>
+            <div class="card"><a href="assets/certificates/hackerrank-sql.pdf">HackerRank SQL</a></div>
+            <div class="card"><a href="assets/certificates/bsnl.pdf">BSNL Training</a></div>
+            <div class="card"><a href="assets/certificates/ncet.pdf">NCET Certification</a></div>
         </div>
+    </section>
 
-    </div>
+    <!-- ACHIEVEMENTS -->
+    <section>
+        <h2 class="title">Achievements</h2>
+        <ul>
+            <li>Gold Winner - Ju Srijan, Jadavpur University</li>
+            <li>State Level Bronze Medalist - Kickboxing</li>
+            <li>Active Member - IOTA Club</li>
+        </ul>
+    </section>
 
-    <!-- RIGHT SIDE -->
-    <div class="contact-form-box">
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2 class="title">Contact Me</h2>
 
-        <form class="contact-form" id="contactForm">
+        <div class="contact-container">
 
-            <input
-                type="text"
-                name="name"
-                placeholder="Your Name"
-                required>
+            <!-- LEFT -->
+            <div class="contact-info">
+                <h3 style="color:#38bdf8;margin-bottom:20px;">Let's Connect</h3>
 
-            <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                required>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:maitreyaguptaa@gmail.com">maitreyaguptaa@gmail.com</a>
+                </div>
 
-            <textarea
-                name="message"
-                placeholder="Your Message"
-                required></textarea>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+918697539102">+91 8697539102</a>
+                </div>
 
-            <button type="submit" class="btn">
-                Send Message
-            </button>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Kolkata, India</span>
+                </div>
 
-            <div class="loader" id="loader"></div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/Assam157" target="_blank">GitHub</a>
+                </div>
 
-        </form>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/maitreya-gupta-0754b0359/" target="_blank">LinkedIn</a>
+                </div>
 
-    </div>
+                <div class="contact-item">
+                    <i class="fas fa-gamepad"></i>
+                    <a href="https://www.roblox.com/games/14190314476/Inception-Battlegrounds" target="_blank">Inception Battlegrounds</a>
+                </div>
+            </div>
 
-</div>
- 
+            <!-- RIGHT -->
+            <div class="contact-form-box">
+                <form class="contact-form" id="contactForm">
+                    <input type="text" name="name" placeholder="Your Name" required />
+                    <input type="email" name="email" placeholder="Your Email" required />
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                    <div class="loader" id="loader"></div>
+                </form>
+            </div>
 
-</section>
+        </div>
+    </section>
 
- 
+    <footer>© 2026 Maitreya Gupta</footer>
 
-<footer>© 2026 Maitreya Gupta</footer>
+    <!-- SMOOTH SCROLL -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
 
-<script>
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-a.addEventListener('click',e=>{
-e.preventDefault();
-document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
-});
-});
-</script>
-  <script>
+    <!-- CONTACT FORM -->
+    <script>
+        const form = document.getElementById("contactForm");
+        const loader = document.getElementById("loader");
+        const popup = document.getElementById("popup");
 
-const form=document.getElementById("contactForm");
-const loader=document.getElementById("loader");
-const popup=document.getElementById("popup");
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+            loader.style.display = "block";
 
-form.addEventListener("submit",function(e){
+            fetch("https://formsubmit.co/ajax/maitreyaguptaa@gmail.com", {
+                    method: "POST",
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        name: form.name.value,
+                        email: form.email.value,
+                        message: form.message.value
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    loader.style.display = "none";
+                    popup.classList.add("show");
+                    form.reset();
+                    setTimeout(() => popup.classList.remove("show"), 3000);
+                })
+                .catch(() => {
+                    loader.style.display = "none";
+                    alert("Something went wrong.");
+                });
+        });
+    </script>
 
-e.preventDefault();
-
-loader.style.display="block";
-
-fetch("https://formsubmit.co/ajax/maitreyaguptaa@gmail.com",{
-
-method:"POST",
-
-headers:{
-'Content-Type':'application/json'
-},
-
-body:JSON.stringify({
-
-name:form.name.value,
-
-email:form.email.value,
-
-message:form.message.value
-
-})
-
-})
-
-.then(response=>response.json())
-
-.then(data=>{
-
-loader.style.display="none";
-
-popup.classList.add("show");
-
-form.reset();
-
-setTimeout(()=>{
-popup.classList.remove("show");
-},3000);
-
-})
-
-.catch(()=>{
-
-loader.style.display="none";
-
-alert("Something went wrong.");
-
-});
-
-});
-
-</script>
 </body>
 </html>
