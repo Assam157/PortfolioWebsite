@@ -75,13 +75,19 @@
             display: inline-block;
             background: #38bdf8;
             color: #000;
-            padding: 12px 24px;
+            padding: 10px 20px;
             border-radius: 8px;
             text-decoration: none;
-            margin: 10px;
+            margin: 8px 4px 0 0;
             font-weight: 600;
+            font-size: 0.85rem;
             border: none;
             cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .btn:hover {
+            opacity: 0.85;
         }
 
         section {
@@ -109,7 +115,8 @@
         .skill {
             background: #1e293b;
             padding: 20px;
-            border-radius: 12px
+            border-radius: 12px;
+            border: 1px solid rgba(56, 189, 248, 0.1);
         }
 
         .grid {
@@ -118,24 +125,25 @@
 
         .card img {
             width: 100%;
-            height: 180px;
+            height: 160px;
             object-fit: cover;
             border-radius: 8px;
-            margin-bottom: 10px
+            margin-bottom: 12px
         }
 
-        .card .btn {
-            margin: 10px 0 0 0;
-            font-size: 0.85rem;
-            padding: 8px 18px;
+        .card h3 {
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            opacity: 0.85;
+            margin-bottom: 12px;
         }
 
         .skill {
             text-align: center
-        }
-
-        .contact a {
-            color: #38bdf8
         }
 
         footer {
@@ -233,6 +241,7 @@
             text-align: center;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
             z-index: 9999;
+            border: 1px solid #38bdf8;
         }
 
         .popup.show {
@@ -240,12 +249,8 @@
         }
 
         @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         @media(max-width:768px) {
@@ -284,10 +289,10 @@
     <section class="hero">
         <img src="assets/profile.jpg" class="profile" alt="Maitreya Gupta" />
         <h1>Hello, I'm <span class="accent">Maitreya Gupta</span></h1>
-        <p>M.Tech Student (Intelligent Automation & Robotics) at Jadavpur University | Full Stack Developer | Robotics Engineer | Roblox Game Developer</p>
+        <p>M.Tech Student (Intelligent Automation & Robotics) at Jadavpur University | Full Stack Developer | Robotics Engineer | Simulation Developer</p>
         <div>
-            <a class="btn" href="assets/resume.pdf">Download Resume</a>
-            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn" href="assets/resume.pdf" target="_blank">Download Resume</a>
+            <a class="btn" href="#projects" style="background:transparent; color:#38bdf8; border:2px solid #38bdf8;">View Projects</a>
         </div>
     </section>
 
@@ -296,7 +301,7 @@
         <h2 class="title">About Me</h2>
         <p>
             I am pursuing M.Tech in Intelligent Automation and Robotics at Jadavpur University after completing my B.Tech in Electronics and Communication Engineering.
-            My interests span Robotics, IoT, Full Stack Development, Research, Android Applications and Game Development. I enjoy building complete systems ranging from web platforms and mobile apps to robotics solutions and multiplayer gaming experiences.
+            My interests span Robotics, Computer Vision, IoT, 3D Web Graphics, Full Stack Development, and Interactive Simulations. I enjoy building complete end-to-end systems ranging from web application consoles to hardware-interfaced robotics solutions.
         </p>
     </section>
 
@@ -304,10 +309,10 @@
     <section>
         <h2 class="title">Highlights</h2>
         <div class="stats">
-            <div class="stat"><h3>8.47</h3><p>Current CGPA</p></div>
-            <div class="stat"><h3>6+</h3><p>Major Projects</p></div>
-            <div class="stat"><h3>M.Tech</h3><p>Jadavpur University</p></div>
-            <div class="stat"><h3>Roblox</h3><p>Published Game</p></div>
+            <div class="stat"><h3>8.67</h3><p>M.Tech CGPA</p></div>
+            <div class="stat"><h3>7+</h3><p>Major Projects</p></div>
+            <div class="stat"><h3>Jadavpur</h3><p>University M.Tech</p></div>
+            <div class="stat"><h3>Roblox & Web</h3><p>Interactive Platforms</p></div>
         </div>
     </section>
 
@@ -318,45 +323,52 @@
 
             <!-- MIMO Antenna -->
             <div class="card">
-                <img src="assets/projects/mimo.png" alt="MIMO Antenna" />
+                <img src="assets/projects/mimo.png" alt="MIMO Antenna" onerror="this.src='https://via.placeholder.com/300x160/1e293b/38bdf8?text=MIMO+Antenna'" />
                 <h3>MIMO Antenna Research</h3>
-                <p>Compact Wideband MIMO Antenna for 5G and IoT Applications.</p>
-                <a class="btn" href="assets/research/mimo_project.pdf">Research PDF</a>
-            </div>
-
-            <!-- Android Job Portal -->
-            <div class="card">
-                <img src="assets/projects/jobportal.png" alt="Job Portal" />
-                <h3>Android Job Portal</h3>
-                <p>Android platform for jobs, internships and recruiter interaction.</p>
-                <a class="btn" href="#">Add Drive Demo Link</a>
+                <p>Compact Wideband MIMO Antenna for 5G and IoT Applications modeled in CST Studio Suite with verified anechoic chamber testing.</p>
+                <a class="btn" href="assets/research/mimo_project.pdf" target="_blank">Research PDF</a>
             </div>
 
             <!-- 3D Medical Segmentation -->
             <div class="card">
-                <img src="assets/Modeling.png" alt="3D Medical Segmentation" />
-                <p>Lightweight 3D Medical Image Segmentation architecture based on a MobileNet-inspired encoder and UNet3D decoder. Designed for efficient volumetric segmentation on resource-constrained hardware while maintaining high accuracy.</p>
-                <a class="btn" href="https://drive.google.com/file/d/1WUjI7OsDQBmiD3bHw9A6kvwdkadnOpoX/view?usp=sharing" target="_blank">
-                    📄 Read Paper
-                </a>
+                <img src="assets/Modeling.png" alt="3D Medical Segmentation" onerror="this.src='https://via.placeholder.com/300x160/1e293b/38bdf8?text=MobiUNet3D'" />
+                <h3>MobiUNet3D Medical Segmentation</h3>
+                <p>Lightweight 3D volumetric medical image segmentation architecture merging a MobileNet encoder with a UNet3D decoder for resource-constrained edge hardware.</p>
+                <a class="btn" href="https://mridetectorfrontend.onrender.com" target="_blank">Live Demo</a>
+                <a class="btn" href="https://drive.google.com/file/d/1WUjI7OsDQBmiD3bHw9A6kvwdkadnOpoX/view?usp=sharing" target="_blank" style="background:#0f172a; color:#38bdf8; border:1px solid #38bdf8;">Read Paper</a>
+            </div>
+
+            <!-- Android Job Portal -->
+            <div class="card">
+                <img src="assets/projects/jobportal.png" alt="Job Portal" onerror="this.src='https://via.placeholder.com/300x160/1e293b/38bdf8?text=Android+Job+Portal'" />
+                <h3>Android Job Posting Platform</h3>
+                <p>Full-stack mobile platform integrated with secure Node.js, Express, and MongoDB REST APIs supporting bulk CSV processing.</p>
+                <a class="btn" href="https://drive.google.com/drive/folders/1xxmCKIUAnzWDO4cv9X6Mpf0noyVl2Vn9" target="_blank">Showcase</a>
             </div>
 
             <!-- Robotics Car -->
             <div class="card">
-                <img src="assets/projects/robotics.png" alt="Robotics Car" />
-                <h3>Robotics Car</h3>
-                <p>Obstacle detection using IR sensors with backend streaming and image processing.</p>
+                <img src="assets/projects/robotics.png" alt="Robotics Car" onerror="this.src='https://via.placeholder.com/300x160/1e293b/38bdf8?text=Robotics+Car'" />
+                <h3>Teleoperated Robotics Car</h3>
+                <p>Obstacle-detecting mobile robot leveraging microcontroller telemetry paired with a Godot Engine frontend interface.</p>
+                <a class="btn" href="https://drive.google.com/drive/folders/1TwgydTlWyWTpwRDfg_91cCaJNY19jnHr" target="_blank">Drive Folder</a>
             </div>
 
             <!-- Roblox Game -->
             <div class="card">
-                <img src="assets/projects/roblox.png" alt="Inception Battlegrounds" />
+                <img src="assets/projects/roblox.png" alt="Inception Battlegrounds" onerror="this.src='https://via.placeholder.com/300x160/1e293b/38bdf8?text=Inception+Battlegrounds'" />
                 <h3>Inception Battlegrounds</h3>
-                <p>Professional Roblox multiplayer combat game built using Roblox Studio and Lua.</p>
-                <a class="btn" href="https://www.roblox.com/games/14190314476/Inception-Battlegrounds">Play Game</a>
+                <p>Multiplayer combat game featuring complex gameplay mechanics, custom user interfaces, and Lua scripting logic inside Roblox Studio.</p>
+                <a class="btn" href="https://www.roblox.com/games/14190314476/Inception-Battlegrounds" target="_blank">Play Game</a>
             </div>
 
-             
+            <!-- Gesture-Controlled Robotic Arm -->
+            <div class="card">
+                <img src="assets/projects/gesture_arm.png" alt="Gesture Robotic Arm" onerror="this.src='https://via.placeholder.com/300x160/1e293b/38bdf8?text=Gesture+Robotic+Arm'" />
+                <h3>Gesture-Controlled Robotic Arm</h3>
+                <p>Real-time 6‑DOF arm control using MediaPipe and YOLO with a novel CNN‑based jitter filter (CRMSF) – research ongoing.</p>
+                <a class="btn" href="https://github.com/Assam157/GestureRobotWorkingCodes" target="_blank">GitHub</a>
+            </div>
 
         </div>
     </section>
@@ -365,33 +377,59 @@
     <section id="skills">
         <h2 class="title">Skills</h2>
         <div class="skills" style="grid-template-columns:repeat(auto-fit,minmax(120px,1fr))">
-            <div class="skill">Java</div><div class="skill">Python</div><div class="skill">C</div><div class="skill">C++</div>
-            <div class="skill">HTML</div><div class="skill">CSS</div><div class="skill">JavaScript</div><div class="skill">React</div>
-            <div class="skill">Django</div><div class="skill">SQL</div><div class="skill">Lua</div><div class="skill">Roblox Studio</div>
-            <div class="skill">IoT</div><div class="skill">Robotics</div><div class="skill">Git</div>
+            <div class="skill">Python</div>
+            <div class="skill">C++</div>
+            <div class="skill">Java</div>
+            <div class="skill">C</div>
+            <div class="skill">React</div>
+            <div class="skill">Three.js</div>
+            <div class="skill">Node.js</div>
+            <div class="skill">SQL</div>
+            <div class="skill">ROS / Gazebo</div>
+            <div class="skill">OpenCV / YOLO</div>
+            <div class="skill">Unity / Godot</div>
+            <div class="skill">Git</div>
         </div>
     </section>
 
     <!-- CERTIFICATES -->
     <section id="certificates">
-        <h2 class="title">Certificates</h2>
+        <h2 class="title">Certificates & Assessments</h2>
         <div class="grid">
-            <div class="card"><a href="assets/certificates/coding-ninjas-fullstack.pdf">Coding Ninjas Full Stack</a></div>
-            <div class="card"><a href="assets/certificates/hackerrank-python.pdf">HackerRank Python</a></div>
-            <div class="card"><a href="assets/certificates/hackerrank-sql.pdf">HackerRank SQL</a></div>
-            <div class="card"><a href="assets/certificates/bsnl.pdf">BSNL Training</a></div>
-            <div class="card"><a href="assets/certificates/ncet.pdf">NCET Certification</a></div>
+            <div class="card">
+                <h3>TCS iON NQT 2026 Scorecard</h3>
+                <p>Cognitive (82.85%), Advanced Quant (93.97%), Python (72.76%)</p>
+                <a class="btn" href="https://drive.google.com/file/d/1Z-wQwM7FRJCSZ_pG0LfJhbmBXzbqL0id/view?usp=sharing" target="_blank">Official Scorecard</a>
+            </div>
+            <div class="card">
+                <h3>Fullstack Development</h3>
+                <p>Coding Ninjas Certification</p>
+                <a class="btn" href="https://certificate.codingninjas.com/view/926c802369d99a3d" target="_blank">View Certificate</a>
+            </div>
+            <div class="card">
+                <h3>Python & SQL (Basic)</h3>
+                <p>HackerRank Verified Credentials</p>
+                <a class="btn" href="https://www.hackerrank.com/certificates/iframe/1357cb226e18" target="_blank">Python Cert</a>
+                <a class="btn" href="https://www.hackerrank.com/certificates/iframe/543561d7fac3" target="_blank" style="background:#0f172a; color:#38bdf8; border:1px solid #38bdf8;">SQL Cert</a>
+            </div>
+            <div class="card">
+                <h3>BSNL Telecom Training</h3>
+                <p>Industrial Telecommunications Training Certificate</p>
+                <a class="btn" href="https://drive.google.com/file/d/1AfxxdZkRRB9qqeDxTJUNxdN6oo3C0JLe/view" target="_blank">View Certificate</a>
+            </div>
         </div>
     </section>
 
     <!-- ACHIEVEMENTS -->
     <section>
         <h2 class="title">Achievements</h2>
-        <ul>
-            <li>Gold Winner - Ju Srijan, Jadavpur University</li>
-            <li>State Level Bronze Medalist - Kickboxing</li>
-            <li>Active Member - IOTA Club</li>
-        </ul>
+        <div style="background:#1e293b; padding:25px; border-radius:12px; border:1px solid rgba(56, 189, 248, 0.1);">
+            <ul style="padding-left: 20px; line-height: 1.8;">
+                <li><strong>Gold Winner</strong> - Ju Srijan (Tech Fest, Jadavpur University)</li>
+                <li><strong>State-Level Bronze Medalist</strong> - Kickboxing</li>
+                <li><strong>Active Member</strong> - IOTA Club</li>
+            </ul>
+        </div>
     </section>
 
     <!-- CONTACT -->
@@ -399,7 +437,6 @@
         <h2 class="title">Contact Me</h2>
 
         <div class="contact-container">
-
             <!-- LEFT -->
             <div class="contact-info">
                 <h3 style="color:#38bdf8;margin-bottom:20px;">Let's Connect</h3>
@@ -421,17 +458,12 @@
 
                 <div class="contact-item">
                     <i class="fab fa-github"></i>
-                    <a href="https://github.com/Assam157" target="_blank">GitHub</a>
+                    <a href="https://github.com/Assam157" target="_blank">GitHub Profile</a>
                 </div>
 
                 <div class="contact-item">
                     <i class="fab fa-linkedin"></i>
-                    <a href="https://www.linkedin.com/in/maitreya-gupta-0754b0359/" target="_blank">LinkedIn</a>
-                </div>
-
-                <div class="contact-item">
-                    <i class="fas fa-gamepad"></i>
-                    <a href="https://www.roblox.com/games/14190314476/Inception-Battlegrounds" target="_blank">Inception Battlegrounds</a>
+                    <a href="https://www.linkedin.com/in/maitreya-gupta-0754b0359/" target="_blank">LinkedIn Profile</a>
                 </div>
             </div>
 
@@ -441,13 +473,16 @@
                     <input type="text" name="name" placeholder="Your Name" required />
                     <input type="email" name="email" placeholder="Your Email" required />
                     <textarea name="message" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="btn">Send Message</button>
+                    <button type="submit" class="btn" style="width:100%; padding:12px; font-size:1rem; margin-top:0;">Send Message</button>
                     <div class="loader" id="loader"></div>
                 </form>
             </div>
-
         </div>
     </section>
+
+    <div class="popup" id="popup">
+        <p style="color:#38bdf8; font-weight:600;">Message Sent Successfully!</p>
+    </div>
 
     <footer>© 2026 Maitreya Gupta</footer>
 
@@ -455,8 +490,11 @@
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(a => {
             a.addEventListener('click', e => {
-                e.preventDefault();
-                document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+                const target = document.querySelector(a.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
             });
         });
     </script>
@@ -472,25 +510,25 @@
             loader.style.display = "block";
 
             fetch("https://formsubmit.co/ajax/maitreyaguptaa@gmail.com", {
-                    method: "POST",
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        name: form.name.value,
-                        email: form.email.value,
-                        message: form.message.value
-                    })
+                method: "POST",
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name: form.name.value,
+                    email: form.email.value,
+                    message: form.message.value
                 })
-                .then(response => response.json())
-                .then(data => {
-                    loader.style.display = "none";
-                    popup.classList.add("show");
-                    form.reset();
-                    setTimeout(() => popup.classList.remove("show"), 3000);
-                })
-                .catch(() => {
-                    loader.style.display = "none";
-                    alert("Something went wrong.");
-                });
+            })
+            .then(response => response.json())
+            .then(data => {
+                loader.style.display = "none";
+                popup.classList.add("show");
+                form.reset();
+                setTimeout(() => popup.classList.remove("show"), 3000);
+            })
+            .catch(() => {
+                loader.style.display = "none";
+                alert("Something went wrong.");
+            });
         });
     </script>
 
