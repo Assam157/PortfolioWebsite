@@ -125,10 +125,11 @@
 
         .card img {
             width: 100%;
-            height: 160px;
-            object-fit: cover;
+            height: 180px;          /* increased for better fit */
+            object-fit: cover;      /* crops to fill without stretching */
             border-radius: 8px;
-            margin-bottom: 12px
+            margin-bottom: 12px;
+            display: block;
         }
 
         .card h3 {
@@ -323,7 +324,7 @@
 
             <!-- MIMO Antenna -->
             <div class="card">
-                <img src="assets/projects/mimo.png" alt="MIMO Antenna" onerror="this.src='https://via.placeholder.com/300x160/1e293b/38bdf8?text=MIMO+Antenna'" />
+                <img src="assets/projects/mimo.png" alt="MIMO Antenna" onerror="this.src='https://via.placeholder.com/300x180/1e293b/38bdf8?text=MIMO+Antenna'" />
                 <h3>MIMO Antenna Research</h3>
                 <p>Compact Wideband MIMO Antenna for 5G and IoT Applications modeled in CST Studio Suite with verified anechoic chamber testing.</p>
                 <a class="btn" href="assets/research/mimo_project.pdf" target="_blank">Research PDF</a>
@@ -331,16 +332,16 @@
 
             <!-- 3D Medical Segmentation -->
             <div class="card">
-                <img src="assets/Modeling.png" alt="3D Medical Segmentation" onerror="this.src='https://via.placeholder.com/300x160/1e293b/38bdf8?text=MobiUNet3D'" />
+                <img src="assets/Modeling.png" alt="3D Medical Segmentation" onerror="this.src='https://via.placeholder.com/300x180/1e293b/38bdf8?text=MobiUNet3D'" />
                 <h3>MobiUNet3D Medical Segmentation</h3>
                 <p>Lightweight 3D volumetric medical image segmentation architecture merging a MobileNet encoder with a UNet3D decoder for resource-constrained edge hardware.</p>
                 <a class="btn" href="https://mridetectorfrontend.onrender.com" target="_blank">Live Demo</a>
-                <a class="btn" href="https://drive.google.com/file/d/1WUjI7OsDQBmiD3bHw9A6kvwdkadnOpoX/view?usp=sharing" target="_blank" style="background:#0f172a; color:#38bdf8; border:1px solid #38bdf8;">Read Paper</a>
+                <!-- "Read Paper" button removed as requested -->
             </div>
 
             <!-- Android Job Portal -->
             <div class="card">
-                <img src="assets/projects/jobportal.png" alt="Job Portal" onerror="this.src='https://via.placeholder.com/300x160/1e293b/38bdf8?text=Android+Job+Portal'" />
+                <img src="assets/projects/jobportal.png" alt="Job Portal" onerror="this.src='https://via.placeholder.com/300x180/1e293b/38bdf8?text=Android+Job+Portal'" />
                 <h3>Android Job Posting Platform</h3>
                 <p>Full-stack mobile platform integrated with secure Node.js, Express, and MongoDB REST APIs supporting bulk CSV processing.</p>
                 <a class="btn" href="https://drive.google.com/drive/folders/1xxmCKIUAnzWDO4cv9X6Mpf0noyVl2Vn9" target="_blank">Showcase</a>
@@ -348,7 +349,7 @@
 
             <!-- Robotics Car -->
             <div class="card">
-                <img src="assets/projects/robotics.png" alt="Robotics Car" onerror="this.src='https://via.placeholder.com/300x160/1e293b/38bdf8?text=Robotics+Car'" />
+                <img src="assets/projects/robotics.png" alt="Robotics Car" onerror="this.src='https://via.placeholder.com/300x180/1e293b/38bdf8?text=Robotics+Car'" />
                 <h3>Teleoperated Robotics Car</h3>
                 <p>Obstacle-detecting mobile robot leveraging microcontroller telemetry paired with a Godot Engine frontend interface.</p>
                 <a class="btn" href="https://drive.google.com/drive/folders/1TwgydTlWyWTpwRDfg_91cCaJNY19jnHr" target="_blank">Drive Folder</a>
@@ -356,7 +357,7 @@
 
             <!-- Roblox Game -->
             <div class="card">
-                <img src="assets/projects/roblox.png" alt="Inception Battlegrounds" onerror="this.src='https://via.placeholder.com/300x160/1e293b/38bdf8?text=Inception+Battlegrounds'" />
+                <img src="assets/projects/roblox.png" alt="Inception Battlegrounds" onerror="this.src='https://via.placeholder.com/300x180/1e293b/38bdf8?text=Inception+Battlegrounds'" />
                 <h3>Inception Battlegrounds</h3>
                 <p>Multiplayer combat game featuring complex gameplay mechanics, custom user interfaces, and Lua scripting logic inside Roblox Studio.</p>
                 <a class="btn" href="https://www.roblox.com/games/14190314476/Inception-Battlegrounds" target="_blank">Play Game</a>
@@ -364,7 +365,7 @@
 
             <!-- Gesture-Controlled Robotic Arm -->
             <div class="card">
-                <img src="assets/projects/gesture_arm.png" alt="Gesture Robotic Arm" onerror="this.src='https://via.placeholder.com/300x160/1e293b/38bdf8?text=Gesture+Robotic+Arm'" />
+                <img src="assets/projects/gesture_arm.png" alt="Gesture Robotic Arm" onerror="this.src='https://via.placeholder.com/300x180/1e293b/38bdf8?text=Gesture+Robotic+Arm'" />
                 <h3>Gesture-Controlled Robotic Arm</h3>
                 <p>Real-time 6‑DOF arm control using MediaPipe and YOLO with a novel CNN‑based jitter filter (CRMSF) – research ongoing.</p>
                 <a class="btn" href="https://github.com/Assam157/GestureRobotWorkingCodes" target="_blank">GitHub</a>
